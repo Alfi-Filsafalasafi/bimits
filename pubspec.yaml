@@ -1,0 +1,41 @@
+name: bimits
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  bottom_bar: ^2.0.3
+  get: 4.6.5
+  flutter: 
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: 2.0.2
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  assets: 
+    - assets/icon/
+    - assets/image/
+  fonts:
+    - family: Poppins-Regular
+      fonts:
+        - asset: assets/font/Poppins-Regular.ttf
+    - family: Poppins-Medium
+      fonts:
+        - asset: assets/font/Poppins-Medium.ttf
+    - family: Poppins-SemiBold
+      fonts:
+        - asset: assets/font/Poppins-SemiBold.ttf
+    - family: Poppins-Bold
+      fonts:
+        - asset: assets/font/Poppins-Bold.ttf
+
+      
+
+  uses-material-design: true
+
