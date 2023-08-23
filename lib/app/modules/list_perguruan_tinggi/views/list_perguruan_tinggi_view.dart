@@ -9,16 +9,27 @@ class ListPerguruanTinggiView extends GetView<ListPerguruanTinggiController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('ListPerguruanTinggiView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'ListPerguruanTinggiView is working',
-          style: TextStyle(fontSize: 20),
+        body: SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "List Perguruan Tinggi",
+              style: TextStyle(fontFamily: 'Poppins-Medium'),
+            ),
+            SizedBox(height: 7),
+            Text(
+              "Cari Perguruan Tinggi impianmu dan jadilah bagian di dalamnya",
+              style: TextStyle(
+                  color: Color(0xFF777777),
+                  fontSize: 12,
+                  fontFamily: 'Poppins-Regular'),
+            ),
+          ],
         ),
       ),
-    );
+    ));
   }
 }

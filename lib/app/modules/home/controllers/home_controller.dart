@@ -1,23 +1,16 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  var box1Clicked = false.obs;
+  var box2Clicked = false.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  void toggleBox1() {
+    box1Clicked.value = true;
+    box2Clicked.value = false;
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  void toggleBox2() {
+    box1Clicked.value = false;
+    box2Clicked.value = true;
   }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
