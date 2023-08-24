@@ -10,6 +10,7 @@ dependencies:
   bottom_bar: ^2.0.3
   carousel_slider: ^4.2.1
   get: 4.6.5
+  http: 1.1.0
   flutter: 
     sdk: flutter
 
@@ -22,21 +23,20 @@ flutter:
   assets: 
     - assets/icon/
     - assets/image/
-  fonts:
+    - assets/image/univ/
+    - assets/image/person/
+  fonts: 
     - family: Poppins-Regular
-      fonts:
+      fonts: 
         - asset: assets/font/Poppins-Regular.ttf
     - family: Poppins-Medium
-      fonts:
+      fonts: 
         - asset: assets/font/Poppins-Medium.ttf
     - family: Poppins-SemiBold
-      fonts:
+      fonts: 
         - asset: assets/font/Poppins-SemiBold.ttf
     - family: Poppins-Bold
-      fonts:
+      fonts: 
         - asset: assets/font/Poppins-Bold.ttf
-
-      
-
   uses-material-design: true
 

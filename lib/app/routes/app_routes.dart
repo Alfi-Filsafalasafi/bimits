@@ -5,10 +5,12 @@ abstract class Routes {
   Routes._();
   static const HOME = _Paths.HOME;
   static const LIST_PERGURUAN_TINGGI = _Paths.LIST_PERGURUAN_TINGGI;
+  static const UNIV_PROFILE = _Paths.UNIV_PROFILE;
 }
 
 abstract class _Paths {
   _Paths._();
   static const HOME = '/home';
   static const LIST_PERGURUAN_TINGGI = '/list-perguruan-tinggi';
+  static const UNIV_PROFILE = '/univ-profile';
 }
