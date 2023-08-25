@@ -263,7 +263,8 @@ class listUniv extends StatelessWidget {
     return ListTile(
       contentPadding: EdgeInsets.only(bottom: 20),
       leading: Image.asset("assets/image/univ/$image.png", width: 55),
-      onTap: () => Get.toNamed(Routes.UNIV_PROFILE),
+      onTap: () => Get.toNamed(Routes.UNIV_PROFILE,
+          arguments: [image, namaUniv, lokasi]),
       title: Text(
         namaUniv,
         style: TextStyle(fontFamily: "Poppins-Medium", fontSize: 12),

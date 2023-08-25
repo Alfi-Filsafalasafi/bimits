@@ -1,3 +1,4 @@
+import 'package:bimits/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -5,9 +6,9 @@ import 'package:get/get.dart';
 import '../controllers/univ_profile_controller.dart';
 
 class UnivProfileView extends GetView<UnivProfileController> {
-  const UnivProfileView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final List<String> args = Get.arguments as List<String>;
     return Scaffold(
         appBar: AppBar(
           toolbarHeight: 100,
@@ -20,8 +21,8 @@ class UnivProfileView extends GetView<UnivProfileController> {
               width: 13,
             ),
           ),
-          title: const Text(
-            'Sekolah Tinggi Ilmu Komputer Indonesia, Malang',
+          title: Text(
+            args[1],
             style: TextStyle(
                 color: Color(0xFF777777),
                 fontFamily: 'Poppins-Medium',
@@ -37,7 +38,7 @@ class UnivProfileView extends GetView<UnivProfileController> {
           children: [
             Center(
               child: Image.asset(
-                "assets/image/univ/stiki.png",
+                "assets/image/univ/${args[0]}.png",
                 width: 113,
               ),
             ),
@@ -184,8 +185,8 @@ class UnivProfileView extends GetView<UnivProfileController> {
   }
 }
 
-class MyCard extends StatelessWidget {
-  const MyCard({
+class MyCard extends GetView<UnivProfileController> {
+  MyCard({
     super.key,
     required this.image,
     required this.nama,
@@ -270,19 +271,24 @@ class MyCard extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                width: 46,
-                height: 19,
-                decoration: BoxDecoration(
-                    color: Color(0xFFFF9B08),
-                    borderRadius: BorderRadius.circular(2)),
-                child: Center(
-                  child: Text(
-                    "CV",
-                    style: TextStyle(
-                        fontFamily: 'Poppins-Medium',
-                        fontSize: 7,
-                        color: Colors.white),
+              GestureDetector(
+                onTap: () {
+                  controller.openCatalog();
+                },
+                child: Container(
+                  width: 46,
+                  height: 19,
+                  decoration: BoxDecoration(
+                      color: Color(0xFFFF9B08),
+                      borderRadius: BorderRadius.circular(2)),
+                  child: Center(
+                    child: Text(
+                      "CV",
+                      style: TextStyle(
+                          fontFamily: 'Poppins-Medium',
+                          fontSize: 7,
+                          color: Colors.white),
+                    ),
                   ),
                 ),
               )

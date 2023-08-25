@@ -1,23 +1,25 @@
+import 'dart:io';
+
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:open_file/open_file.dart';
+import 'package:path_provider/path_provider.dart';
 
 class UnivProfileController extends GetxController {
-  //TODO: Implement UnivProfileController
+  void openCatalog() async {
+    try {
+      final dir = await getTemporaryDirectory();
+      final file = File("${dir.path}/cv.pdf");
+      print(file);
+      var data = await rootBundle.load("assets/file/cv.pdf");
+      var bytes = data.buffer.asUint8List();
+      //memasukkan data pada bytes
+      await file.writeAsBytes(bytes);
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+      await OpenFile.open(file.path);
+      print("berhasil");
+    } catch (e) {
+      print(e);
+    }
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

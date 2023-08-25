@@ -247,21 +247,27 @@ class HomeView extends GetView<HomeController> {
                                 ),
                               ),
                             ),
-                            Column(
-                              children: [
-                                Image.asset(
-                                  "assets/icon/konsultasi.png",
-                                  width: 32,
+                            GestureDetector(
+                              onTap: () => Get.toNamed(Routes.KONSULTASI),
+                              child: Container(
+                                child: Column(
+                                  children: [
+                                    Image.asset(
+                                      "assets/icon/konsultasi.png",
+                                      width: 32,
+                                    ),
+                                    SizedBox(
+                                      height: 11,
+                                    ),
+                                    Text(
+                                      "Konsultasi",
+                                      style: TextStyle(
+                                          color: Color(0xFF03050F),
+                                          fontSize: 10),
+                                    )
+                                  ],
                                 ),
-                                SizedBox(
-                                  height: 11,
-                                ),
-                                Text(
-                                  "Konsultasi",
-                                  style: TextStyle(
-                                      color: Color(0xFF03050F), fontSize: 10),
-                                )
-                              ],
+                              ),
                             ),
                             Column(
                               children: [

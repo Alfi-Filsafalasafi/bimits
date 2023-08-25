@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/konsultasi/bindings/konsultasi_binding.dart';
+import '../modules/konsultasi/views/konsultasi_view.dart';
 import '../modules/list_perguruan_tinggi/bindings/list_perguruan_tinggi_binding.dart';
 import '../modules/list_perguruan_tinggi/views/list_perguruan_tinggi_view.dart';
 import '../modules/univ_profile/bindings/univ_profile_binding.dart';
@@ -27,8 +29,13 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.UNIV_PROFILE,
-      page: () => const UnivProfileView(),
+      page: () => UnivProfileView(),
       binding: UnivProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.KONSULTASI,
+      page: () => const KonsultasiView(),
+      binding: KonsultasiBinding(),
     ),
   ];
 }
